@@ -1,0 +1,22 @@
+# Changelog
+
+## jumanlrc-lib
+
+A lightweight static library derived from Juman++ v2.0.0-rc4.
+Removes RNN, Protobuf, training, formatters, tests, and CLI.
+Adds a C API and a C++ API with mora-level ruby splitting.
+
+### Key changes
+- Stripped dependencies: RNN (Eigen3), Protobuf, pathie-cpp test files
+- Single `CMakeLists.txt` with manual config headers
+- `cmake_minimum_required` bumped from 3.1 to 3.10 (pathie-cpp)
+- RNN-related code removed from `core/env.h` and `core/env.cc`
+
+jumanpp_handle* h = jumanpp_init("jumandic.jppmdl");  // place model in CWD, or use full path
+char** surf; char** read;
+int n = jumanpp_analyze(h, "私は学生です", &surf, &read);
+for (int i = 0; i < n; i++)
+    printf("%s → %s\n", surf[i], read[i]);
+jumanpp_free_result(surf, read, n);
+jumanpp_destroy(h);
+```

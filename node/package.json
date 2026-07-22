@@ -1,0 +1,46 @@
+{
+  "name": "jumanlrc",
+  "version": "1.0.0",
+  "description": "Node.js native addon for JumanLRC — Japanese lyrics ruby (furigana) annotation with mora-level splitting",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "src/",
+    "CMakeLists.txt",
+    "index.js",
+    "index.d.ts",
+    "scripts/",
+    "CHANGELOG"
+  ],
+  "scripts": {
+    "install": "node scripts/build-native.js",
+    "build": "cmake-js compile",
+    "build:debug": "cmake-js compile --debug",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "node-addon-api": "^8.0.0"
+  },
+  "devDependencies": {
+    "cmake-js": "^7.3.0"
+  },
+  "os": ["win32"],
+  "cpu": ["x64"],
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "keywords": [
+    "japanese",
+    "furigana",
+    "ruby",
+    "lyrics",
+    "mora",
+    "jumanpp",
+    "morphological-analysis"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chrollis/JumanLRC-Lib.git"
+  }
+}

@@ -1,0 +1,16 @@
+# Build output
+build/
+
+# Model file (large binary, ~100MB+)
+jumandic.jppmdl
+
+# test file
+input.txt
+output.txt
+
+# IDE / OS
+.vs/
+.vscode/
+*.user
+Thumbs.db
+.DS_Store
